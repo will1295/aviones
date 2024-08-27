@@ -17,6 +17,7 @@ class Avion():
     def __str__(self):
         return (f"Modelo {self.modelo}\n"+
                 f"Tipo {self.tipo}\n")
+                
 
 
 class Aerolinea():
@@ -34,6 +35,14 @@ class Aerolinea():
         print("***Listado de aviones***")
         for a in self.aviones:
             print(a)
+
+    def vuelos(self,nvuelo,hsal,destino,estado):
+        print("***Estado de los vuelos***"
+              f"Aerolínea: {self.nombre}"+
+              f"Vuelo: {nvuelo}"+
+              f"Destino: {destino}"+
+              f"Hora de salida: {hsal}"+
+              f"Estado: {estado}")
 
 
 #aerol = Aerolinea("Aerolinea El Salvador")
@@ -54,5 +63,11 @@ while True:
         break
     else:
         continue
+
+nvuelo= input("Ingrese el numero del vuelo: ")
+hvuelo= input("Ingrese la hora de salida: ")
+destino= input("Ingrese la ciudad de destino: ")
+estado= input("Ingrese el estado: ")
+aer.vuelos(nvuelo,hvuelo,destino,estado)
 
     
